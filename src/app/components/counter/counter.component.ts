@@ -7,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
+  title: string = 'Contador Redux';
+  counter: number;
 
+  constructor(){
+    this.counter = 0;
+  }
+
+  increment(){
+    this.counter++;
+    console.log("Incrementando...");
+  }
+
+  decrement(){
+    this.counter--;
+    console.log("Decrementando...");
+  }
+
+  reset(){
+    this.counter = 0;
+    console.log("Reseteando...");
+  }
 }
